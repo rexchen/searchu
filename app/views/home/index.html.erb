@@ -1,4 +1,9 @@
-<%= form_tag("/search", method: "post") do %>
-  <%= text_field_tag(:keyword) %>
-  <%= submit_tag("Search") %>
-<% end %>
+<div id="homepage">
+	<div class="logo">
+		<%= image_tag "logo.png" %>
+	</div>
+	<%= form_tag("/search", method: "post", class:"search") do %>
+		<%= text_field_tag :keyword, "" ,class: "text", placeholder: "搜索" %>
+		<%= submit_tag "", class: "search_go" %>
+	<% end %>
+</div>
