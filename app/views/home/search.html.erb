@@ -1,0 +1,46 @@
+<h1>Home#index</h1>
+<p>Find me in app/views/home/index.html.erb</p>
+<%=@rex%>
+<hr>
+<%=@token%>
+
+<hr>
+<%if @pttResults['total'] > 0%>
+    PTT總筆數：<%=@pttResults['total']%>
+    <% @pttResults['result'].each do |result| %>
+    <div>
+        <a href="<%=result['url']%>"><%=result['title']%></a>
+    </div>
+    <%end%>
+<%end%>
+
+<hr>
+<%if @fbResults['total'] > 0%>
+    Facebook總筆數：<%=@fbResults['total']%>
+    <% @fbResults['result'].each do |result| %>
+    <div>
+        <a href="<%=result['url']%>"><%=result['page_id_name']%></a>
+    </div>
+    <%end%>
+<%end%>
+
+<hr>
+<%if @forumResults['total'] > 0%>
+    Forum總筆數：<%=@forumResults['total']%>
+    <% @forumResults['result'].each do |result| %>
+    <div>
+        <a href="<%=result['url']%>"><%=result['title']%></a>
+    </div>
+    <%end%>
+<%end%>
+
+
+<hr>
+<%if @newsResults['total'] > 0%>
+    News總筆數：<%=@newsResults['total']%>
+    <% @newsResults['result'].each do |result| %>
+    <div>
+        <a href="<%=result['url']%>"><%=result['title']%></a>
+    </div>
+    <%end%>
+<%end%>
